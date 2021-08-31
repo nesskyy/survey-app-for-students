@@ -1,0 +1,36 @@
+{
+    "name": "nesskyy/survey-app-for-students",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Survey\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kamil Szarek",
+            "email": "nesskyy@gmail.com",
+            "homepage": "https://szarek.tech"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^0.12.96",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "scripts": {
+        "cs-analyze": "vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "vendor/bin/php-cs-fixer fix",
+        "phpstan-analyze": "vendor/bin/phpstan analyze -c phpstan.neon",
+        "phpunit": "vendor/bin/phpunit"
+    },
+    "require": {
+        "beberlei/assert": "^3.3",
+        "symfony/console": "^5.3"
+    }
+}
